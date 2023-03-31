@@ -1,10 +1,11 @@
 import { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col,Spinner } from "react-bootstrap";
 import "../assets/images.css";
 
 class Gallery extends Component {
   state = {
     movies: [],
+    isLoading:true
   };
 
   async componentDidMount() {
@@ -15,7 +16,7 @@ class Gallery extends Component {
 
       if (response.ok) {
         const data = await response.json();
-        this.setState({ movies: data.Search });
+        this.setState({ movies: data.Search ,isLoading:false});
       } else {
         console.log("errore nel recupero dei dati");
       }
@@ -29,6 +30,14 @@ class Gallery extends Component {
       <Container fluid className="px-3">
         <Row className="g-3">
           <h2 className="mt-5">Harry Potter</h2>
+          {this.state.isLoading && !this.state.error && (
+            <div className="d-flex justify-content-center">
+                    <Spinner animation="border" role="status" >
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>
+
+            </div>
+                    )}
           {this.state.movies.map((film, index) => (
             <>
               <Col xs={6} md={2} key={`film-${index}`}>
