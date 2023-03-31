@@ -3,7 +3,7 @@ import { Dropdown, Container, Row, Col } from "react-bootstrap";
 const HeroSection = () => (
   <Container fluid className="my-3 bg-transparent px-3">
     <Row className="">
-      <Col md={8} className=" d-inline-flex align-items-center ">
+      <Col sm={12} md={8} className=" d-inline-flex align-items-center ">
         <h2>TV Shows</h2>
         <Dropdown className="ms-3">
           <Dropdown.Toggle variant="dark" className="dropdown-toggle">
@@ -19,7 +19,7 @@ const HeroSection = () => (
           </Dropdown.Menu>
         </Dropdown>
       </Col>
-      <Col md={4} className="d-flex justify-content-end align-items-center ">
+      <Col sm={12} md={4} className="d-flex justify-content-end align-items-center ">
         <span className="d-flex align-items-center border rounded-1 p-2 me-3 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
