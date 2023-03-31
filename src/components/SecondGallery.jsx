@@ -39,7 +39,7 @@ class SecondGallery extends Component {
             </div>
                     )}
           {this.state.lordOfRings.map((films, index) => (
-            <>
+            
               <Col xs={6} md={2} key={`films-${index}`}>
                 <img
                   src={films.Poster}
@@ -54,7 +54,7 @@ class SecondGallery extends Component {
                   }}
                 />
               </Col>
-            </>
+
           ))}
         </Row>
       </Container>

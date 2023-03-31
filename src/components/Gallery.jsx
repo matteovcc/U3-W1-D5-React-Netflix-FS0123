@@ -38,9 +38,8 @@ class Gallery extends Component {
 
             </div>
                     )}
-          {this.state.movies.map((film, index) => (
-            <>
-              <Col xs={6} md={2} key={`film-${index}`}>
+          {this.state.movies.map((film,index) => (
+              <Col xs={6} md={2} key = {`films-${index}`}>
                 <img
                   src={film.Poster}
                   alt={film.Title}
@@ -53,7 +52,6 @@ class Gallery extends Component {
                   }}
                 />
               </Col>
-            </>
           ))}
         </Row>
       </Container>
