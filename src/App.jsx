@@ -4,6 +4,8 @@ import MyNav from "./components/MyNav";
 import HeroSection from "./components/HeroSection";
 import Gallery from "./components/Gallery";
 import MyFooter from "./components/MyFooter";
+import SecondGallery from "./components/SecondGallery";
+import ThirdGallery from "./components/ThirdGallery";
 
 
 
@@ -13,6 +15,8 @@ function App() {
     <MyNav />
     <HeroSection/>
     <Gallery />
+    <SecondGallery/>
+    <ThirdGallery />
     <MyFooter/>
     </>
   );

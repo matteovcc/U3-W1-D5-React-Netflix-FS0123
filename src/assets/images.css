@@ -1,0 +1,7 @@
+.film-card {
+  transition: transform 0.4s;
+}
+
+.film-card:hover {
+  transform: translateY(-10px);
+}

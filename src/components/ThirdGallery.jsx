@@ -2,20 +2,20 @@ import { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../assets/images.css";
 
-class Gallery extends Component {
+class ThirdGallery extends Component {
   state = {
-    movies: [],
+    series: [],
   };
 
   async componentDidMount() {
     try {
       const response = await fetch(
-        "http://www.omdbapi.com/?apikey=bbacec44&s=harry%20potter"
+        "http://www.omdbapi.com/?apikey=bbacec44&s=game%20of%20thrones"
       );
 
       if (response.ok) {
         const data = await response.json();
-        this.setState({ movies: data.Search });
+        this.setState({ series: data.Search });
       } else {
         console.log("errore nel recupero dei dati");
       }
@@ -28,13 +28,13 @@ class Gallery extends Component {
     return (
       <Container fluid className="px-3">
         <Row className="g-3">
-          <h2 className="mt-5">Harry Potter</h2>
-          {this.state.movies.map((film, index) => (
+          <h2 className="mt-5">Game of thrones</h2>
+          {this.state.series.map((films, index) => (
             <>
-              <Col xs={6} md={2} key={`film-${index}`}>
+              <Col xs={6} md={2} key={`films-${index}`}>
                 <img
-                  src={film.Poster}
-                  alt={film.Title}
+                  src={films.Poster}
+                  alt={films.Title}
                   className="img-fluid rounded film-card"
                   style={{
                     objectFit: "cover",
@@ -52,4 +52,4 @@ class Gallery extends Component {
   }
 }
 
-export default Gallery;
+export default ThirdGallery;
