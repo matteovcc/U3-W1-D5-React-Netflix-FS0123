@@ -1,5 +1,4 @@
 import { Dropdown, Container, Row, Col } from "react-bootstrap";
-// import { BiArrowsFullscreen, BiList } from 'react-icons/bi';
 
 const HeroSection = () => (
   <Container fluid className="my-3 bg-transparent px-3">
@@ -10,7 +9,7 @@ const HeroSection = () => (
           <Dropdown.Toggle variant="dark" className="dropdown-toggle">
             Genres
           </Dropdown.Toggle>
-          <Dropdown.Menu>
+          <Dropdown.Menu variant="dark">
             <Dropdown.Item href="#">Action</Dropdown.Item>
             <Dropdown.Item href="#">Thriller</Dropdown.Item>
             <Dropdown.Item href="#">Horror</Dropdown.Item>
