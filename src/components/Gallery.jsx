@@ -51,7 +51,7 @@ class Gallery extends Component {
             </div>
           )}
           {this.state.movies.map((film, index) => (
-            <Col xs={6} md={2} key={`films-${index}`}>
+            <Col xs={6} md={3} lg={2} key={`films-${index}`}>
               {/* style={imageStyle} onClick={this.handleChange} */}
 
               <img

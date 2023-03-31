@@ -6,6 +6,7 @@ import Gallery from "./components/Gallery";
 import MyFooter from "./components/MyFooter";
 import SecondGallery from "./components/SecondGallery";
 import ThirdGallery from "./components/ThirdGallery";
+// import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <SecondGallery />
       <ThirdGallery />
       <MyFooter />
+      {/* <Profile/> */}
     </>
   );
 }

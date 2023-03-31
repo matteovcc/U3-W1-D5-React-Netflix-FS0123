@@ -38,7 +38,7 @@ class ThirdGallery extends Component {
             </div>
           )}
           {this.state.series.map((films, index) => (
-            <Col xs={6} md={2} key={`films-${index}`}>
+            <Col xs={6} md={3} lg={2} key={`films-${index}`}>
               <img
                 src={films.Poster}
                 alt={films.Title}
