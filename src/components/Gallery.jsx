@@ -11,7 +11,7 @@ class Gallery extends Component {
 
   //   handleChange = () =>{
   //     this.setState({selected: !this.state.selected})
-  //   } 
+  //   }
   async componentDidMount() {
     try {
       const response = await fetch(
@@ -75,7 +75,7 @@ class Gallery extends Component {
 
 export default Gallery;
 
-//sopra volevo rendere il bordo bianco al click alla col o all'immagine,
+//sopra volevo rendere il bordo bianco al click della col o dell'immagine,
 //ci sono riuscito ma siccome è brutto lo lascio commentato
-//inoltre siccome non ho creato un componente singolo per i film
-// all'evento del click  tutte le immagini mappate si colorano di bianco
+//inoltre siccome non ho creato un componente figlio per i film
+// all'evento del click  tutte le immagini  si colorano di bianco per via del map

@@ -58,7 +58,7 @@ const MyFooter = () => (
 
     <Container className="text-secondary ">
       <Row>
-        <Col xs={6} className="mt-2"  md={3} >
+        <Col xs={6} className="mt-2" md={3}>
           <div>Audio and Subtitles</div>
           <div>Media center</div>
           <div>Privacy</div>

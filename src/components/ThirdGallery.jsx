@@ -1,11 +1,11 @@
 import { Component } from "react";
-import { Container, Row, Col,Spinner } from "react-bootstrap";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
 import "../assets/images.css";
 
 class ThirdGallery extends Component {
   state = {
     series: [],
-    isLoading:true
+    isLoading: true,
   };
 
   async componentDidMount() {
@@ -16,7 +16,7 @@ class ThirdGallery extends Component {
 
       if (response.ok) {
         const data = await response.json();
-        this.setState({ series: data.Search , isLoading:false});
+        this.setState({ series: data.Search, isLoading: false });
       } else {
         console.log("errore nel recupero dei dati");
       }
@@ -32,28 +32,25 @@ class ThirdGallery extends Component {
           <h2 className="mt-5">Game of thrones</h2>
           {this.state.isLoading && !this.state.error && (
             <div className="d-flex justify-content-center">
-                    <Spinner animation="border" role="status" >
-                        <span className="visually-hidden">Loading...</span>
-                    </Spinner>
-
+              <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </Spinner>
             </div>
-                    )}
+          )}
           {this.state.series.map((films, index) => (
-            
-              <Col xs={6} md={2} key={`films-${index}`}>
-                <img
-                  src={films.Poster}
-                  alt={films.Title}
-                  className="img-fluid rounded film-card"
-                  style={{
-                    objectFit: "cover",
-                    height: "250px",
-                    width: "250px",
-                    objectPosition: "top",
-                  }}
-                />
-              </Col>
-            
+            <Col xs={6} md={2} key={`films-${index}`}>
+              <img
+                src={films.Poster}
+                alt={films.Title}
+                className="img-fluid rounded film-card"
+                style={{
+                  objectFit: "cover",
+                  height: "250px",
+                  width: "250px",
+                  objectPosition: "top",
+                }}
+              />
+            </Col>
           ))}
         </Row>
       </Container>
