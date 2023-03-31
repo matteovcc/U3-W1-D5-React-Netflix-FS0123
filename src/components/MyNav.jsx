@@ -7,7 +7,10 @@ const NavBar = () => (
     <Navbar.Brand href="#">
       <img src={logo} width="100px" alt="Logo" />
     </Navbar.Brand>
-    <Navbar.Toggle aria-controls="navbarNav" style={{color:"black",backgroundColor:"white"}}/>
+    <Navbar.Toggle
+      aria-controls="navbarNav"
+      style={{ color: "black", backgroundColor: "white" }}
+    />
     <Navbar.Collapse id="navbarNav">
       <Nav className="me-auto ">
         <Nav.Link href="#" className="text-white">
@@ -55,7 +58,7 @@ const NavBar = () => (
           height="32"
         />
 
-        <NavDropdown id="dropdownUser" align="end"  menuVariant="dark">
+        <NavDropdown id="dropdownUser" align="end" menuVariant="dark">
           <NavDropdown.Item href="profile.html">Profile</NavDropdown.Item>
           <NavDropdown.Item href="settings.html">Settings</NavDropdown.Item>
           <NavDropdown.Divider />
