@@ -2,6 +2,8 @@ import { Component } from "react";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
 import "../assets/images.css";
 
+import SingleMovie from "./SingleMovie";
+
 class Gallery extends Component {
   state = {
     movies: [],
@@ -30,19 +32,10 @@ class Gallery extends Component {
   }
 
   render() {
-    // let imageStyle;
-    // if (this.state.selected === true) {
-    //     imageStyle = {
-    //       border: "1px solid white"
-    //     }
-    //   } else {
-    //     imageStyle = { border: "none" }
-    //   }
-
     return (
       <Container fluid className="px-3">
         <Row className="g-3">
-          <h2 className="mt-5">Harry Potter</h2>
+          <h2 className="mt-5">{this.props.title}</h2>
           {this.state.isLoading && !this.state.error && (
             <div className="d-flex justify-content-center">
               <Spinner animation="border" role="status">
@@ -52,19 +45,7 @@ class Gallery extends Component {
           )}
           {this.state.movies.map((film, index) => (
             <Col xs={6} md={3} lg={2} key={`films-${index}`}>
-              {/* style={imageStyle} onClick={this.handleChange} */}
-
-              <img
-                src={film.Poster}
-                alt={film.Title}
-                className="img-fluid rounded film-card"
-                style={{
-                  objectFit: "cover",
-                  height: "250px",
-                  width: "250px",
-                  objectPosition: "top",
-                }}
-              />
+              <SingleMovie title={film.title} img={film.Poster} />
             </Col>
           ))}
         </Row>
@@ -74,8 +55,3 @@ class Gallery extends Component {
 }
 
 export default Gallery;
-
-//sopra volevo rendere il bordo bianco al click della col o dell'immagine,
-//ci sono riuscito ma siccome è brutto lo lascio commentato
-//inoltre siccome non ho creato un componente figlio per i film
-// all'evento del click  tutte le immagini  si colorano di bianco per via del map

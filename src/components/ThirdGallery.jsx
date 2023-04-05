@@ -29,7 +29,7 @@ class ThirdGallery extends Component {
     return (
       <Container fluid className="px-3">
         <Row className="g-3">
-          <h2 className="mt-5">Game of thrones</h2>
+          <h2 className="mt-5">{this.props.title}</h2>
           {this.state.isLoading && !this.state.error && (
             <div className="d-flex justify-content-center">
               <Spinner animation="border" role="status">

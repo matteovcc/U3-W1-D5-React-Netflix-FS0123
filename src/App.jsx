@@ -13,9 +13,9 @@ function App() {
     <>
       <MyNav />
       <HeroSection />
-      <Gallery />
-      <SecondGallery />
-      <ThirdGallery />
+      <Gallery title="Harry Potter" />
+      <SecondGallery title="Lord of the rings" />
+      <ThirdGallery title="Game Of Thrones"/>
       <MyFooter />
       {/* <Profile/> */}
     </>
